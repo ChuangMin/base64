@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Base64 encode/decode</title>
+<script>
+
+function encode(){
+//let unix_timestamp = 1549312452
+  let base64EncodedString = window.btoa(document.getElementById("encodetext").value);
+  console.log(base64EncodedString); // aGVsbG8gd29ybGQ=
+  document.getElementById("encode").innerHTML = base64EncodedString; 
+
+}
+function decode(){
+  let base64DecodedString = window.atob(document.getElementById("decodetext").value);
+  console.log(base64DecodedString); // hello world
+  document.getElementById("decode").innerHTML = base64DecodedString; 
+}
+
+</script>
+</head>
+<body>
+<h1>Encode</h1>
+<p >encode</p>
+<input id="encodetext" type="text">
+<button type="button" onclick="encode()" >Click Me!</button>
+<p id="encode"></p> 
+<BR></BR>
+<BR></BR>
+
+<h1>Decode</h1>
+<p>decode</p> 
+<input id="decodetext" type="text">
+<button type="button" onclick="decode()" >Click Me!</button>
+<p id="decode"></p> 
+</body>
+<script>
+</script>
+</html>
+
