@@ -5,9 +5,8 @@
 <script>
 
 function encode(){
-//let unix_timestamp = 1549312452
   let base64EncodedString = window.btoa(document.getElementById("encodetext").value);
-  console.log(base64EncodedString); // aGVsbG8gd29ybGQ=
+  console.log(base64EncodedString);
   document.getElementById("encode").innerHTML = base64EncodedString; 
 
 }
@@ -23,6 +22,8 @@ function decode(){
 <h1>Encode</h1>
 <p >encode</p>
 <textarea id="encodetext" name="encodetext" rows="4" cols="50">
+ Hello World
+</textarea>
 <button type="button" onclick="encode()" >Click Me!</button>
 <p id="encode"></p> 
 <BR></BR>
@@ -31,6 +32,8 @@ function decode(){
 <h1>Decode</h1>
 <p>decode</p> 
 <textarea id="decodetext" name="decodetext" rows="4" cols="50">
+aGVsbG8gd29ybGQ=
+ </textarea>
 <button type="button" onclick="decode()" >Click Me!</button>
 <p id="decode"></p> 
 </body>
